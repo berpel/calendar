@@ -1,0 +1,118 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+@import 'fonts'
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+
+html, body, .container
+  height 100%
+  width 100%
+
+body
+  font-family 'helvetica neue', arial
+
+.days
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  height 100%
+  overflow-x scroll
+  overflow-y hidden
+
+  .day
+    min-width 20%
+    background #f4f4f4
+    header
+      background #54B1D7
+      color #fff
+      font-family 'Proxima-Nova-Light'
+      padding 16px
+      time
+        span
+          display inline-block
+          vertical-align middle
+          &.day-of-week
+            font-size 32px
+            margin-right 8px
+          &.date
+            font-size 14px
+            .month
+              text-transform uppercase
+    &:nth-child(even)
+      background #f9f9f9
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+  .days .day
+    min-width 100%
+    max-width 100%
+
+$background = #fff
+$foreground = #5bcbfc
+$border = #bbb
+
+.add
+  //border 1px solid $border
+  margin 8px
+  //min-height 100px
+  padding 8px
+
+.items
+  //padding 8px
+  .item
+    article
+      overflow hidden
+      padding 8px
+      padding-bottom 0
+      section
+        &.default, &.article
+          clearfix()
+          background-position center center
+          background-size cover
+          color #fff
+          padding 8px
+        &.default
+          background-image radial-gradient(at top right, rgba(255,255,255,.2), rgba(255,255,255,0))
+          .title
+            background none
+        &.edit
+          color #111
+          padding 8px
+        time
+          background rgba(0,0,0,.5)
+          float right
+          font-family 'Proxima-Nova-Light'
+          font-size 14px
+          padding 4px
+          text-transform uppercase
+        .title
+          background rgba(0,0,0,.5)
+          display inline
+          font-family 'Proxima-Nova-Light'
+          font-size 32px
+          line-height 35px
+          //text-shadow 0 0 2px #000
+        footer
+          clearfix()
+          padding-top 8px
+          .people
+            float left
+          .icons
+            float right
+            font-size 32px
+.person
+  border 2px solid #fff
+  border-radius 50%
+  height 28px
+  margin-right 4px
+  vertical-align top
+  width 28px
+.icon
+  //background $foreground
+  color #fff
+  //font-size 12px

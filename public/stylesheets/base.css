@@ -1,0 +1,276 @@
+/*
+ * Import nib
+ */
+@font-face {
+  font-family: 'Benguiat';
+  src: url("../fonts/BenguiatGothicStd-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url("../fonts/proximanova-regular-webfont.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima-Nova-Bold';
+  src: url("../fonts/proximanova-bold-webfont.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima-Nova-Light';
+  src: url("../fonts/proximanova-light-webfont.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'helvetica neue', arial;
+}
+.days {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -o-box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.days .day {
+  min-width: 20%;
+  background: #f4f4f4;
+}
+.days .day header {
+  background: #54b1d7;
+  color: #fff;
+  font-family: 'Proxima-Nova-Light';
+  padding: 16px;
+}
+.days .day header time span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.days .day header time span.day-of-week {
+  font-size: 32px;
+  margin-right: 8px;
+}
+.days .day header time span.date {
+  font-size: 14px;
+}
+.days .day header time span.date .month {
+  text-transform: uppercase;
+}
+.days .day:nth-child(even) {
+  background: #f9f9f9;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .days .day {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+.add {
+  margin: 8px;
+  padding: 8px;
+}
+.items .item article {
+  overflow: hidden;
+  padding: 8px;
+  padding-bottom: 0;
+}
+.items .item article section.default,
+.items .item article section.article {
+  zoom: 1;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding: 8px;
+}
+.items .item article section.default:before,
+.items .item article section.article:before,
+.items .item article section.default:after,
+.items .item article section.article:after {
+  content: "";
+  display: table;
+}
+.items .item article section.default:after,
+.items .item article section.article:after {
+  clear: both;
+}
+.items .item article section.default {
+  background-image: -webkit-radial-gradient(at top right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background-image: -moz-radial-gradient(at top right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background-image: -o-radial-gradient(at top right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background-image: -ms-radial-gradient(at top right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  background-image: radial-gradient(at top right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+}
+.items .item article section.default .title {
+  background: none;
+}
+.items .item article section.edit {
+  color: #111;
+  padding: 8px;
+}
+.items .item article section time {
+  background: rgba(0,0,0,0.5);
+  float: right;
+  font-family: 'Proxima-Nova-Light';
+  font-size: 14px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+.items .item article section .title {
+  background: rgba(0,0,0,0.5);
+  display: inline;
+  font-family: 'Proxima-Nova-Light';
+  font-size: 32px;
+  line-height: 35px;
+}
+.items .item article section footer {
+  zoom: 1;
+  padding-top: 8px;
+}
+.items .item article section footer:before,
+.items .item article section footer:after {
+  content: "";
+  display: table;
+}
+.items .item article section footer:after {
+  clear: both;
+}
+.items .item article section footer .people {
+  float: left;
+}
+.items .item article section footer .icons {
+  float: right;
+  font-size: 32px;
+}
+.person {
+  border: 2px solid #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 28px;
+  margin-right: 4px;
+  vertical-align: top;
+  width: 28px;
+}
+.icon {
+  color: #fff;
+}

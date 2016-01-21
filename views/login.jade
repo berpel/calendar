@@ -1,0 +1,7 @@
+form(name='loginForm', ng-submit='login(credentials)', novalidate)
+  div.error(ng-show='error'): p.message {{error}}
+  .inputs
+    input(type='text', placeholder='Email', ng-model='credentials.email', autofocus)
+    input(type='password', placeholder='Password', ng-model='credentials.password')
+  .buttons
+    button.button.green(type='submit') Log in

@@ -1,0 +1,25 @@
+calendar.days
+  day.day(ng-repeat='day in days')
+    header
+      time 
+        span.day-of-week {{day.date.day_of_week}} 
+        span.date 
+          span.month {{day.date.month}}
+          br
+          | {{day.date.day_of_month}} 
+    .wrap
+      .items
+        item.item(ng-repeat='item in day.items')
+          article
+            section(ng-class='item.type', style='{{getBackground(item)}}')
+              time(ng-show='item.time') {{item.time}}
+              .title {{getTitle(item)}}
+              footer
+                .people(ng-show='item.people')
+                  img.person(ng-repeat='person in item.people', ng-src='{{person.image}}')
+                .icons(ng-show='item.icons')
+                  span.icon(ng-repeat='icon in item.icons'): i(class='fa fa-{{icon}}')
+
+      //-.add(contenteditable='true', ng-keypress='add($event)')
+    
+    //-textarea()

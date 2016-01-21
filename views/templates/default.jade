@@ -1,0 +1,8 @@
+section.default(style='background-color: {{item.background}}')
+  time(ng-show='item.time') {{item.time}}
+  .title {{item.text}}
+  footer
+    .people(ng-show='item.people')
+      img.person(ng-repeat='person in item.people', ng-src='{{person.image}}')
+    .icons(ng-show='item.icons')
+      span.icon(ng-repeat='icon in item.icons'): i(class='fa fa-{{icon}}')
